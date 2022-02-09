@@ -1,0 +1,151 @@
+body{
+    background-color: #d7d7d7;
+}
+
+/* Lineair gradient */
+div:first-child {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    display: block;
+    width: 270px;
+    margin: 40px auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+/* first div */
+div:first-child div:first-child {
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+    background:
+    linear-gradient(135deg, rgb(149, 232, 247) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, rgb(149, 232, 247) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, rgb(149, 232, 247) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(149, 232, 247) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: rgb(151, 107, 255);
+}
+
+div:first-child div:first-child:hover {
+     animation: stretch 2s ease-in-out infinite;
+    animation-direction: alternate-reverse;
+    
+}
+
+
+@keyframes stretch {
+  to {
+    background-size: 50px 50px;
+    
+  }
+}
+
+/* color swap */
+div:first-child div:nth-child(2){
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+    background:
+    linear-gradient(135deg, rgb(149, 232, 247) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, rgb(149, 232, 247) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, rgb(149, 232, 247) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(149, 232, 247) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: rgb(151, 107, 255);
+
+
+}
+
+@keyframes colorSwitch {
+    to {
+    background: 
+    linear-gradient(135deg, rgb(151, 107, 255) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, rgb(151, 107, 255) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, rgb(151, 107, 255) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(151, 107, 255) 25%, transparent 25%);
+    background-size: 100px 150px;
+    background-color: rgb(149, 232, 247) ;
+
+    }
+}
+/* hover */
+div:first-child div:nth-child(2):hover {
+    animation: 0.5s ease-out infinite  colorSwitch;
+    animation-direction: alternate-reverse;
+}
+
+
+    /* pattern slide  */
+div:first-child div:nth-child(3){
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+    background:
+    linear-gradient(135deg, rgb(149, 232, 247) 25%, transparent 25%),
+    linear-gradient(225deg, rgb(149, 232, 247) 25%, transparent 25%),
+    linear-gradient(315deg, rgb(149, 232, 247) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(149, 232, 247) 25%, transparent 25%);
+    background-size: 80px 80px;
+    background-color: rgb(151, 107, 255);
+
+
+}
+
+div:first-child div:nth-child(3):hover{
+    animation: slide 2s linear infinite;
+    animation-direction: normal;
+}
+
+@keyframes slide {
+    to {
+        background-position: 10em 0 ;
+        background-size: 80px 80px;
+        
+
+    }
+
+}
+
+/* radial gradient */
+div:nth-child(2){
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* first div */
+div:nth-child(2) div:first-child{
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+    background: radial-gradient(circle,rgb(149, 232, 247) 30%, rgb(151, 107, 255) 30%);
+
+}
+/* hover */
+div:nth-child(2) div:first-child:hover{
+    animation: ripple 1s linear infinite;
+}
+@keyframes ripple {
+    to {
+        background: radial-gradient(circle, rgb(151, 107, 255) 30%,rgb(149, 232, 247) 30%);
+       
+    }
+}
+
+/* second div */
+div:nth-child(2) div:nth-child(2){
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+}
+
+/* third div */
+div:nth-child(2) div:nth-child(3){
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+}
