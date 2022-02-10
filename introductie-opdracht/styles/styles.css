@@ -7,6 +7,7 @@ div:first-child {
     width: 90vw;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 h1 {
     display: block;
@@ -31,7 +32,7 @@ div:first-child div:first-child {
 
 div:first-child div:first-child:hover {
      animation: stretch 2s ease-in-out infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate;
     
 }
 
@@ -74,7 +75,7 @@ div:first-child div:nth-child(2){
 /* hover */
 div:first-child div:nth-child(2):hover {
     animation: 0.5s ease-out infinite  colorSwitch;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate;
 }
 
 
@@ -110,42 +111,57 @@ div:first-child div:nth-child(3):hover{
 }
 
 /* radial gradient */
-div:nth-child(2){
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-    
-}
-
-/* first div */
-div:nth-child(2) div:first-child{
+/* fourth div */
+div:nth-child(1) div:nth-child(4){
     width: 400px;
     height: 400px;
     margin: 20px 20px;
-    background: radial-gradient(circle,rgb(149, 232, 247) 30%, rgb(151, 107, 255) 30%);
+    background: radial-gradient(circle at center,  rgb(151, 107, 255) 30%, rgb(149, 232, 247)  15%);
+    background-size: 80px 80px;
 
 }
 /* hover */
-div:nth-child(2) div:first-child:hover{
-    animation: ripple 1s linear infinite;
+div:nth-child(1) div:nth-child(4):hover{
+    animation: zoom 1s ease-in-out infinite;
+    animation-direction: alternate;
 }
-@keyframes ripple {
+@keyframes zoom {
+
     to {
-        background: radial-gradient(circle, rgb(151, 107, 255) 30%,rgb(149, 232, 247) 30%);
+        background-position-y: 30em;
+        
        
     }
+
 }
 
-/* second div */
-div:nth-child(2) div:nth-child(2){
+div:nth-child(1) div:nth-child(5){
     width: 400px;
     height: 400px;
     margin: 20px 20px;
+    border-radius: 100%;
+    background: conic-gradient( rgb(151, 107, 255), rgb(149, 232, 247));
+
 }
 
-/* third div */
-div:nth-child(2) div:nth-child(3){
-    width: 400px;
-    height: 400px;
-    margin: 20px 20px;
+
+
+div:nth-child(1) div:nth-child(5):hover {
+    animation: rotate 0.5s ease-in-out infinite;
+}
+
+
+@keyframes rotate {
+
+    30% {
+        background: conic-gradient( #fff, rgb(151, 107, 255), rgb(149, 232, 247));
+    }
+
+    60%{
+        background: conic-gradient( rgb(151, 107, 255),#fff, rgb(149, 232, 247));
+    }
+
+    90% {
+        background: conic-gradient( rgb(151, 107, 255), rgb(149, 232, 247), #fff);
+    }
 }
