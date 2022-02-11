@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #000; */
+    color: #fff;
+    filter: unset;
+}
+
+/* Landingspage */
+body > div:first-child{
+    background: url('/eindopdracht/img/dan-gold-E6HjQaB7UEA-unsplash.jpg');
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-blend-mode: saturation;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+header:first-child {
+    width: 100vw;
+    height: 100vh;
+    filter: none;
+    
+
+}
+
+header section{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8em;
+
+}
+header:first-child section:first-child p  {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header section div {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgb(64, 179, 255);
+    mix-blend-mode: multiply;
+    position: absolute;
+    background-color: transparent;
+    filter: none;
+
+}
