@@ -7,6 +7,12 @@
 }
 
 /* --- LANDINGS PAGE ---  */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+}
 /* background img */
 body > div:first-child{
     background: url('/eindopdracht/img/dan-gold-E6HjQaB7UEA-unsplash.jpg');
@@ -20,12 +26,14 @@ body > div:first-child{
     top: 0;
     left: 0;
     z-index: -999;
+    
 }
 
 /* --- BEGIN HEADER ---  */ 
 body > header {
-    width: 100vw;
-    height: 100vh;
+    width: 45vw;
+    height: 30vh;
+    margin-left: -200px;
 
 }
 
@@ -33,12 +41,13 @@ header section{
     width: 40%;
     display: block;
     margin: 0 auto;
+    
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10em;
-    margin: 250px 0 0;
+    font-size: 5em;
+    margin: 50px 0 0;
 
 
 }
@@ -54,13 +63,13 @@ h1::after {
     clip-path: polygon(100% 80%, 0 80%, 50% 0);
     background-color: rgb(55, 108, 255);
     content: "";
-    width: 9em;
-    height: 6em;
+    width: 9.3em;
+    height: 6.5em;
     display: inline-block;
     mix-blend-mode: screen;
-    margin: -1.8em 0 3em -7.4em;
+    margin: -5em 0 0 -4em;
     position: fixed;
-
+    transform: rotate(180deg);
 
 }
 /* circle */
@@ -82,7 +91,7 @@ h1::before {
 /* tagline */
 header:nth-child(2) section p  {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-top: 20px;
 
 
