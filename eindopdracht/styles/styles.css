@@ -2,12 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: #000; */
     color: #fff;
     filter: unset;
 }
 
-/* Landingspage */
+/* --- LANDINGS PAGE ---  */
+/* background img */
 body > div:first-child{
     background: url('/eindopdracht/img/dan-gold-E6HjQaB7UEA-unsplash.jpg');
     filter: grayscale(100%);
@@ -16,16 +16,16 @@ body > div:first-child{
     background-blend-mode: saturation;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -999;
 }
-header:first-child {
+
+/* --- BEGIN HEADER ---  */ 
+body > header {
     width: 100vw;
     height: 100vh;
-    filter: none;
-    
 
 }
 
@@ -37,22 +37,56 @@ header section{
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 8em;
+    font-size: 10em;
+    margin: 250px 0 0;
+
 
 }
-header:first-child section:first-child p  {
+h1 span {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 40vh;
+    width: 60vw;
+    padding: 0 10px;
+
+}
+/* triangle */
+h1::after {
+    clip-path: polygon(100% 80%, 0 80%, 50% 0);
+    background-color: rgb(55, 108, 255);
+    content: "";
+    width: 9em;
+    height: 6em;
+    display: inline-block;
+    mix-blend-mode: screen;
+    margin: -1.8em 0 3em -7.4em;
+    position: fixed;
+
+
+}
+/* circle */
+h1::before {
+    clip-path: circle(50% at 50% 50%);
+    background-color: rgb(255, 0, 0);
+    content: "";
+    width: 6.5em;
+    height: 6.5em;
+    display: inline-block;
+    mix-blend-mode: screen;
+    position: fixed;
+    top: -1.1em;
+    right: -1em;
+    /* z-index: -111; */
+
+
+}
+/* tagline */
+header:nth-child(2) section p  {
     font-family: Arial, Helvetica, sans-serif;
-}
+    font-size: 2.5em;
+    margin-top: 20px;
 
-header section div {
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid rgb(64, 179, 255);
-    mix-blend-mode: multiply;
-    position: absolute;
-    background-color: transparent;
-    filter: none;
 
 }
+/* --- EINDE HEADER --- */
+
+/* --- EINDE LANDINGSPAGE ---*/
