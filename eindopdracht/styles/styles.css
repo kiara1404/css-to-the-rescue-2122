@@ -112,22 +112,32 @@ Zorgen dat de <dl> en <dd> verdwijnen tot click en/of hover
 bron: https://css-tricks.com/solved-with-css-dropdown-menus/ */
 main  {
     display: flex;
-    width: 90vw;
+    width: 100vw;
     justify-content: center;
     flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
-    margin: -80px auto;
+    margin: 80px auto;
+    
+    
 }
 
-main section  {
-    width: 300px;
-    margin: 20px;
+main section:nth-child(2n)  {
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    transform: rotate(45deg);
+    
+}
+main section:nth-child(2n-1) {
+    transform: rotate(-45deg);
 }
 
 main section h2{
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: underline green
+    
 }
 
 main section header p {
@@ -138,6 +148,7 @@ main section header p {
 main section h2 a:hover {
     cursor: pointer;
     font-weight: 800;  
+    
 
 }
 
@@ -150,24 +161,39 @@ main section dl, blockquote {
 main section:hover > dl{
     opacity: 1;
     display: block;
-    font-size: 1.3em;
+    font-size: 1.3em;  
 
 }
 
 main section dl > div{
     display: flex;
     justify-content: space-between;
+    margin: 20px;
+    width: 400px;
+}
+
+main section dl dt {
+    font-weight: 800;
+    text-transform: capitalize;
 }
 main section > dl::before{
     clip-path: polygon(100% 80%, 0 80%, 50% 0);
     transform: rotate(180deg);
     content: "";
-    background-color: rgb(34, 182, 46);
+    background-color: rgba(47, 241, 63, 0.651);
     width: 300px;
     height: 300px;
     position: fixed;
-    margin-top: -120px;
-    mix-blend-mode: difference;
+    margin-top: -130px;
+    mix-blend-mode: hard-light;
     z-index: -99;
 }
+main section > dl::before:hover{
 
+}
+
+@keyframes stretch {
+    to {
+        height: 900px;
+    }
+}
