@@ -77,7 +77,7 @@ h1::after {
 
 }
 /* circle */
-main div::before {
+main > div::before {
     clip-path: circle(50% at 50% 50%);
     background-color: rgb(255, 0, 0);
     content: "";
@@ -116,7 +116,7 @@ main  {
     justify-content: center;
     flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
+    margin: -80px auto;
 }
 
 main section  {
@@ -133,12 +133,11 @@ main section h2{
 main section header p {
     font-size: 1.5em;
     letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 main section h2 a:hover {
     cursor: pointer;
-    font-weight: 800;
-
-    
+    font-weight: 800;  
 
 }
 
@@ -151,9 +150,14 @@ main section dl, blockquote {
 main section:hover > dl{
     opacity: 1;
     display: block;
+    font-size: 1.3em;
 
 }
 
+main section dl > div{
+    display: flex;
+    justify-content: space-between;
+}
 main section > dl::before{
     clip-path: polygon(100% 80%, 0 80%, 50% 0);
     transform: rotate(180deg);
@@ -166,3 +170,4 @@ main section > dl::before{
     mix-blend-mode: difference;
     z-index: -99;
 }
+
