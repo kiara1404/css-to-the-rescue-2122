@@ -36,9 +36,6 @@ body > header {
     height: 30vh;
     margin-left: -200px;
 
-    
-   
-
 }
 
 header section{
@@ -91,6 +88,7 @@ main div::before {
     position: fixed;
     top: -11em;
     right: -10em;
+    z-index: -99;
 
 
 
@@ -117,31 +115,54 @@ main  {
     width: 90vw;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
 
 main section  {
-    width: 200px;
+    width: 300px;
+    margin: 20px;
 }
 
 main section h2{
-
     font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-main section a:hover {
+
+main section header p {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+main section h2 a:hover {
     cursor: pointer;
     font-weight: 800;
-    color: teal;
+
+    
 
 }
 
 main section dl, blockquote {
     opacity: 0;
     display: none;
+
 }
 
 main section:hover > dl{
-
     opacity: 1;
-    display: block
+    display: block;
+
+}
+
+main section > dl::before{
+    clip-path: polygon(100% 80%, 0 80%, 50% 0);
+    transform: rotate(180deg);
+    content: "";
+    background-color: rgb(34, 182, 46);
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    margin-top: -100px;
+    mix-blend-mode: difference;
+    z-index: -99;
 }
