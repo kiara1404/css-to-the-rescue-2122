@@ -119,6 +119,7 @@ main  {
     flex-wrap: nowrap;
     font-family: Arial, Helvetica, sans-serif;
     margin:  0 0  5rem;
+    overflow: scroll;
      
 }
 
@@ -176,8 +177,8 @@ main section:hover > dl{
 main section dl > div{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    width: 400px;
+    padding: 10px;
+    width: 350px;
 }
 
 main section dl dt {
@@ -200,6 +201,7 @@ main section > dl::before{
 /* http://thenewcode.com/482/Placing-Text-on-a-Circle-with-SVG */
 
 /* RESPONSIVE */
+/*MAX 600 PX*/
 @media only screen and (max-width: 600px) {
 
    
@@ -219,17 +221,15 @@ main section > dl::before{
         transform: rotate(90deg);
    
     }
-    /* main > div::before {
-        width: 3em;
-        height: 3em;
-    } */
+
 
     main section {
         transform: rotate(0);
         width: 300px;
         text-align: center;
-        z-index: -9;
+    
     }
+    
     main section > dl::before{
         width: 200px;
         height: 200px;
@@ -264,13 +264,14 @@ main section > dl::before{
     main section dl > div{
         width: 230px;
         font-size: 0.8em;
-        margin: 30px;
+        padding: 10px;
         
-    }
+    } 
 
 
 }
 
+/*MIN 600 PX*/
 @media only screen and (min-width: 600px) {
     main {
         flex-wrap: wrap;
@@ -286,7 +287,7 @@ main section > dl::before{
         z-index: 99;
     }
 }
-
+/*MIN 768 PX*/
 @media only screen and (min-width: 768px){
         main {
         flex-wrap: wrap;
@@ -304,25 +305,38 @@ main section > dl::before{
     }
 }
 
-
+/*MIN 1750 PX*/
 @media only screen and (min-width: 1750px){
     main  {
     display: flex;
-    width: 95vw;
+    width: 80vw;
     height: 80vh;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-family: Arial, Helvetica, sans-serif;
     overflow: visible;
+    margin: -20px 0 0 50px;
      
     }
 
     main section  {
-    width: 500px;
-    margin-top: 40px;
+    width: 400px;
+    margin-top: 30px;
     margin-bottom: 30px;
     transform: rotate(45deg);
     
+    }
+    main section:hover{
+        animation: open 1s ;
+        animation-fill-mode: forwards;
+    }
+    @keyframes open {
+        
+        to{
+            transform: rotate(0);
+            margin-left: 300px;
+        }
+        
     }
 }
 
