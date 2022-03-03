@@ -32,7 +32,7 @@ body > div:first-child{
 
 /* --- BEGIN HEADER ---  */ 
 body > header {
-
+    
     width: 45vw;
     height: 30vh;
     margin-left: -200px;
@@ -131,7 +131,7 @@ main section  {
     
 }
 main section:hover{
-    background-color: rgba(65, 139, 87, 0.779);
+    
     padding: 20px;
     margin: -20px 0 50px;
     animation: rotateMenu 1s
@@ -164,7 +164,9 @@ main section header p {
     font-size: 1.5em;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    
 }
+
 main section h2 a:hover {
     cursor: pointer;
     font-weight: 800;  
@@ -193,6 +195,8 @@ main section dl > div{
     justify-content: space-between;
     padding: 10px;
     width: 350px;
+    height: auto;
+    background-color: rgba(65, 139, 87, 0.779);
 }
 
 main section dl dt {
@@ -242,14 +246,15 @@ main section > dl::before{
     main section {
         transform: rotate(0);
         width: 300px;
-        text-align: center;
+        /* text-align: center; */
     
     }
     
     main section > dl::before{
         width: 200px;
         height: 200px;
-        margin: -5em 0 0 -4em;
+        margin: -5em 0 0 2em;
+               
     }
     main section h2{
         font-size: 2em;
@@ -278,9 +283,11 @@ main section > dl::before{
     }
 
     main section dl > div{
-        width: 230px;
+        width: 260px;
         font-size: 0.8em;
         padding: 10px;
+        height: auto;
+        margin-left: 20px;
         
     } 
 
@@ -341,6 +348,13 @@ main section > dl::before{
     margin-bottom: 30px;
     transform: rotate(45deg);
     
+    }
+
+
+
+
+    main section > dl::before{
+        margin-left:30px ;
     }
     main section:hover{
         animation: open 1s ;
