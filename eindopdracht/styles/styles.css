@@ -134,7 +134,21 @@ main section:hover{
     background-color: rgba(65, 139, 87, 0.779);
     padding: 20px;
     margin: -20px 0 50px;
+    animation: rotateMenu 1s
 
+}
+
+/* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg)
+  }
+  70% {
+    transform: rotateX(20deg)
+  }
+  100% {
+    transform: rotateX(0deg)
+  }
 }
 
 main section h2{
@@ -198,6 +212,8 @@ main section > dl::before{
     z-index: -99;
 
 }
+
+
 /* http://thenewcode.com/482/Placing-Text-on-a-Circle-with-SVG */
 
 /* RESPONSIVE */
@@ -255,7 +271,7 @@ main section > dl::before{
     
     main {
     width: 100vw;
-    height: 70vh;  
+    height: 80vh;  
     flex-wrap: wrap;
     overflow-y: scroll;
     
