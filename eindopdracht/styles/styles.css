@@ -11,7 +11,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 /* background img */
 body > div:first-child{
@@ -23,6 +23,7 @@ body > div:first-child{
     width: 100vw;
     height: 100vh;
     position: fixed;
+    overflow: scroll;
     top: 0;
     left: 0;
     z-index: -999;
@@ -112,33 +113,35 @@ Zorgen dat de <dl> en <dd> verdwijnen tot click en/of hover
 bron: https://css-tricks.com/solved-with-css-dropdown-menus/ */
 main  {
     display: flex;
-    width: 100vw;
+    width: 75vw;
+    height: 80vh;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 80px auto;
-    
-    
+    margin:  0 0  5rem;
+     
 }
 
 main section  {
     width: 500px;
     margin-top: 40px;
-    margin-bottom: 130px;
+    margin-bottom: 30px;
     transform: rotate(45deg);
     
 }
 main section:hover{
     background-color: rgba(65, 139, 87, 0.779);
     padding: 20px;
+    margin: -20px 0 50px;
+
 }
 
 main section h2{
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-decoration: underline;
-    text-decoration-color: rgb(125, 25, 255);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
     
 }
 
@@ -153,6 +156,7 @@ main section h2 a:hover {
     
 }
 
+
 main section dl, blockquote {
     opacity: 0;
     display: none;
@@ -164,7 +168,8 @@ main section:hover > dl{
     display: block;
     font-size: 1.3em;  
     margin-left: -20px;
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: screen;
+    height: auto;
 
 }
 
@@ -183,7 +188,7 @@ main section > dl::before{
     clip-path: polygon(100% 80%, 0 80%, 50% 0);
     transform: rotate(180deg);
     content: "";
-    background-color: rgba(241, 47, 47, 0.651);
+    background-color: rgba(115, 47, 241, 0.651);
     width: 300px;
     height: 300px;
     position: fixed;
@@ -191,5 +196,133 @@ main section > dl::before{
     mix-blend-mode: screen;
     z-index: -99;
 
+}
+/* http://thenewcode.com/482/Placing-Text-on-a-Circle-with-SVG */
+
+/* RESPONSIVE */
+@media only screen and (max-width: 600px) {
+
+   
+    h1{
+        font-size: 2.5em;
+        margin: 1em 0 0 1.5em;
+
+    }
+
+    h1::after {
+        width: 4em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4em;
+        margin: 0 0 0 20px;
+        transform: rotate(90deg);
+   
+    }
+    /* main > div::before {
+        width: 3em;
+        height: 3em;
+    } */
+
+    main section {
+        transform: rotate(0);
+        width: 300px;
+        text-align: center;
+        z-index: -9;
+    }
+    main section > dl::before{
+        width: 200px;
+        height: 200px;
+        margin: -5em 0 0 -4em;
+    }
+    main section h2{
+        font-size: 2em;
+        padding: 10px;
+        
+    }
+    main section header p{
+        font-size: 1em;
+    }
+
+    body > header {
+        height: 170px;
+        z-index: 999;
+    }
+    header:nth-child(2) section p  {
+        font-size: 1em;
+        margin: 0.5em 0 0 4em;
+    }
+    
+    main {
+    width: 100vw;
+    height: 70vh;  
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    
+    }
+
+    main section dl > div{
+        width: 230px;
+        font-size: 0.8em;
+        margin: 30px;
+        
+    }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        flex-wrap: wrap;
+        width: 85vw;
+        margin: 0 auto;
+    }
+    main section {
+        transform: rotate(0);
+        width: 350px;
+        
+    }
+    body > header {
+        z-index: 99;
+    }
+}
+
+@media only screen and (min-width: 768px){
+        main {
+        flex-wrap: wrap;
+        margin: 40px auto;
+        overflow: scroll;
+        height: 65vh;
+    }
+    main section {
+        transform: rotate(0);
+        
+    }
+        body > header {
+        height: 30vh;
+        z-index: 999;
+    }
+}
+
+
+@media only screen and (min-width: 1750px){
+    main  {
+    display: flex;
+    width: 95vw;
+    height: 80vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: visible;
+     
+    }
+
+    main section  {
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    transform: rotate(45deg);
+    
+    }
 }
 
