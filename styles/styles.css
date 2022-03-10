@@ -128,27 +128,13 @@ opacity: 0;
 section input[type='radio']:checked + dl {
     opacity: 1;
     display: block;
-    animation: open 1s ;
-    animation-fill-mode: forwards;
+
 }
 
 section label {
     cursor: pointer;
 }
 
-section label h2:hover{
-    background-color: rgba(122, 129, 124, 0.651);
-    zoom: 1.2;
-    transition:  ease-in-out;
-}
-@keyframes open {
-        
-    to{
-        transform: rotate(-45deg);
-        margin-left: 300px;
-    }
-        
-}
 main  {
     display: flex;
     width: 75vw;
@@ -414,6 +400,25 @@ main section > dl::before{
 
     main section > dl::before{
         margin-left:30px ;
+    }
+    section input[type='radio']:checked + dl {
+        animation: open 1s ;
+        animation-fill-mode: forwards;
+    }
+
+    section label h2:hover{
+    background-color: rgba(122, 129, 124, 0.651);
+    zoom: 1.2;
+    transition:  ease-in-out;
+    }
+
+    @keyframes open {
+            
+        to{
+            transform: rotate(-45deg);
+            margin-left: 300px;
+        }
+            
     }
 
 }
