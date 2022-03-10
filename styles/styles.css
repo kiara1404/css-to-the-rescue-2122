@@ -170,19 +170,6 @@ main section  {
 }
 
 
-/* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
-@keyframes rotateMenu {
-  0% {
-    transform: rotateX(-90deg)
-  }
-  70% {
-    transform: rotateX(20deg)
-  }
-  100% {
-    transform: rotateX(0deg)
-  }
-}
-
 main section h2{
     font-size: 3em;
     text-transform: uppercase;
@@ -315,7 +302,23 @@ main section > dl::before{
         margin-left: 20px;
         
     } 
-
+    
+    section input[type='radio']:checked + dl {
+    animation: rotateMenu 1s ;
+    animation-fill-mode: forwards;
+    }
+        /* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg)
+  }
+  70% {
+    transform: rotateX(20deg)
+  }
+  100% {
+    transform: rotateX(0deg)
+  }
+}
 
 }
 
@@ -334,6 +337,22 @@ main section > dl::before{
     body > header {
         z-index: 99;
     }
+        section input[type='radio']:checked + dl {
+    animation: rotateMenu 1s ;
+    animation-fill-mode: forwards;
+}
+    /* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg)
+  }
+  70% {
+    transform: rotateX(20deg)
+  }
+  100% {
+    transform: rotateX(0deg)
+  }
+}
 }
 /*MIN 768 PX*/
 @media only screen and (min-width: 768px){
@@ -351,7 +370,25 @@ main section > dl::before{
         height: 30vh;
         z-index: 999;
     }
+    section input[type='radio']:checked + dl {
+    animation: rotateMenu 1s ;
+    animation-fill-mode: forwards;
+    
 }
+    /* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg)
+  }
+  70% {
+    transform: rotateX(20deg)
+  }
+  100% {
+    transform: rotateX(0deg)
+  }
+}
+}
+
 
 /*MIN 1750 PX*/
 @media only screen and (min-width: 1750px){
@@ -374,9 +411,6 @@ main section > dl::before{
     transform: rotate(45deg);
     
     }
-
-
-
 
     main section > dl::before{
         margin-left:30px ;
