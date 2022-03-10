@@ -19,9 +19,8 @@ git clone https://github.com/kiara1404/css-to-the-rescue
 To run this static site, you'll need a local server on your machine
 ```
 
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
+### What if ....
+Wat if I had more time? I wanted to implement focus states. That the user can tab through the website. Unfortunatly, I didn't make it within the given time.
 ### Progress
 For my progress and further explanation, you can visit the [wiki](https://github.com/kiara1404/css-to-the-rescue-2122/wiki) of this repo.
 ### License ©
