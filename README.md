@@ -1,7 +1,7 @@
 
 ### Description
 <!-- ☝️ replace this description with a description of your own work -->
-This project is a single page application in vanilla JavaScript that allows you to scan products and get their nutritional values and scores.
+This project is a HTML and CSS only static site. The assignment was to create a menu inspired by an analog artwork. The artwork that inspired me is made by Tadanori Yokoo. ![](https://github.com/kiara1404/css-to-the-rescue-2122/blob/main/wiki/Screenshot%202022-02-10%20at%2015.09.07.png?raw=true)
 
 ### Live Demo
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
