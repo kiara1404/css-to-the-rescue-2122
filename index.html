@@ -14,7 +14,7 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
 <body>
     <div></div>
     <header>
-        <!--vraag of dit mag -->
+
         <section>
             <h1><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
             <p>appetizing since 1924</p>
@@ -23,16 +23,19 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
     </header>
 
     <main>
-        <!--vraag of dit mag -->
+
         <div></div>
         <section>
-            <header>
 
-                <h2><a>Noshes</a></h2>
+            <header>
+                <label for='noshes'>
+                    <h2><a>noshes</a></h2>
+                </label>
+
                 <p>small dishes</p>
             </header>
 
-
+            <input type='radio' name="menu" value="noshes" id='noshes'>
             <dl>
                 <div>
                     <div>
@@ -45,11 +48,11 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
 
 
                 <div>
-                <div>
-                    <dt>Hot Smoke/Cold Smoke</dt>
-                    <dd>Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</dd>
-                </div>
-                <dd>13</dd>
+                    <div>
+                        <dt>Hot Smoke/Cold Smoke</dt>
+                        <dd>Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</dd>
+                    </div>
+                    <dd>13</dd>
                 </div>
 
 
@@ -113,10 +116,14 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
 
 
         <section>
-            <header>
-                <h2><a>boards</a></h2>
+            <header><label for='boards'>
+                    <h2><a>boards</a></h2>
+                </label>
+
+
                 <p>open-faced sandwiches</p>
             </header>
+            <input type='radio' name="menu" value="boards" id='boards'>
 
             <dl>
                 <div>
@@ -161,12 +168,18 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
         <section>
 
             <header>
-                <h2><a>platters</a></h2>
+                <label for='platters'>
+                    <h2><a>platters</a></h2>
+                </label>
+
+
                 <p>To be shared</p>
             </header>
 
+            <input type='radio' name="menu" value="platters" id='platters'>
+
             <dl>
-                    <div>
+                <div>
                     <div>
                         <dt>smoked fish</dt>
                         <dd><em>Serves 3 - 4 people</em> with cream cheese, onion, tomato, capers &amp; new potato salad
@@ -174,37 +187,37 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
                             Russ &amp; daughters bread basket</dd>
                     </div>
                 </div>
-                    
 
 
+
+                <div>
                     <div>
-                        <div>
-                            <dt>the hattie</dt>
-                            <dd>smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</dd>
-                        </div>
-                        <dd>80</dd>
+                        <dt>the hattie</dt>
+                        <dd>smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</dd>
                     </div>
+                    <dd>80</dd>
+                </div>
 
 
+                <div>
                     <div>
-                        <div>
-                            <dt>the ida</dt>
-                            <dd>scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</dd>
-                        </div>
-                        <dd>70</dd>
+                        <dt>the ida</dt>
+                        <dd>scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</dd>
                     </div>
+                    <dd>70</dd>
+                </div>
 
 
+                <div>
                     <div>
-                        <div>
-                            <dt>the anne</dt>
-                            <dd>western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild
-                                alaskan
-                                salmon
-                                roe</dd>
-                        </div>
-                        <dd>90</dd>
+                        <dt>the anne</dt>
+                        <dd>western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild
+                            alaskan
+                            salmon
+                            roe</dd>
                     </div>
+                    <dd>90</dd>
+                </div>
 
             </dl>
 
@@ -214,7 +227,11 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
         <section>
 
             <header>
-                <h2><a>Eggs</a></h2>
+                <label for='eggs'>
+                    <h2><a>Eggs</a></h2>
+                </label>
+
+
                 <p>served all the time</p>
             </header>
 
@@ -223,7 +240,7 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
                 <p>Eat in good health.</p>
                 <cite>— Yiddish idiom</cite>
             </blockquote>
-
+            <input type='radio' name="menu" value="eggs" id='eggs'>
             <dl>
                 <div>
                     <div>
@@ -292,7 +309,11 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
 
 
         <section>
-            <h2><a>Soup</a></h2>
+            <label for='soup'>
+                <h2><a>Soup</a></h2>
+            </label>
+
+            <input type='radio' name="menu" value="soup" id='soup'>
 
             <dl>
                 <div>
@@ -334,8 +355,11 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
         </section>
 
 
-        <section>
-            <h2><a>salads</a></h2>
+        <section><label for='salads'>
+                <h2><a>salads</a></h2>
+            </label>
+            <input type='radio' name="menu" value="salads" id='salads'>
+
 
             <dl>
                 <div>
@@ -369,7 +393,11 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
 
 
         <section>
-            <h2><a>sweet</a></h2>
+            <label for='sweet'>
+                <h2><a>sweet</a></h2>
+            </label>
+            
+
 
             <blockquote>
                 <p lang="yi">A moltsayt on a tsimes iz via a mayse on a moshl.</p>
@@ -377,7 +405,7 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
                 <cite>— Yiddish idiom</cite>
             </blockquote>
 
-
+            <input type='radio' name="menu" value="sweet" id='sweet'>
             <dl>
                 <div>
                     <div>
@@ -433,24 +461,24 @@ https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
                 </div>
 
 
-                
+
+                <div>
                     <div>
-                        <div>
-                            <dt>baked farmer cheese</dt>
-                            <dd>blueberry, walnut &amp; honey with pumpernickel</dd>
-                        </div>
-                        <dd>7</dd>
+                        <dt>baked farmer cheese</dt>
+                        <dd>blueberry, walnut &amp; honey with pumpernickel</dd>
                     </div>
+                    <dd>7</dd>
+                </div>
 
 
-                    
-                        <div>
-                            <div>
-                                <dt>cookie plate</dt>
-                                <dd>Russ &amp; daughters cookies &amp; sweets</dd>
-                            </div>
-                            <dd>8</dd>
-                        </div>
+
+                <div>
+                    <div>
+                        <dt>cookie plate</dt>
+                        <dd>Russ &amp; daughters cookies &amp; sweets</dd>
+                    </div>
+                    <dd>8</dd>
+                </div>
 
             </dl>
 

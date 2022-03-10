@@ -6,12 +6,10 @@
     filter: unset;
 }
 
-/* --- LANDINGS PAGE ---  */
-
 body {
     width: 100vw;
     height: 100vh;
-    /* overflow: scroll; */
+
 }
 /* background img */
 body > div:first-child{
@@ -30,7 +28,10 @@ body > div:first-child{
     
 }
 
-/* --- BEGIN HEADER ---  */ 
+/* 
+====================================   
+        --- BEGIN LOGO ---  
+===================================*/ 
 body > header {
     
     width: 45vw;
@@ -103,14 +104,51 @@ header:nth-child(2) section p  {
 
 
 }
-/* --- EINDE HEADER --- */
+/* ============================================
+            --- EINDE LOGO ---
+ ============================================== */
 
-/* --- EINDE LANDINGSPAGE ---*/
 
 
-/* 
-Zorgen dat de <dl> en <dd> verdwijnen tot click en/of hover
+
+
+/*
+================================================
+               RADIO BTN HACK
+================================================
+
+Zorgen dat de <dl> en <dd> verdwijnen tot click
 bron: https://css-tricks.com/solved-with-css-dropdown-menus/ */
+
+
+section input[type='radio'] {
+opacity: 0;
+}
+
+section input[type='radio']:checked + dl {
+    opacity: 1;
+    display: block;
+    animation: open 1s ;
+    animation-fill-mode: forwards;
+}
+
+section label {
+    cursor: pointer;
+}
+
+section label h2:hover{
+    background-color: rgba(122, 129, 124, 0.651);
+    zoom: 1.2;
+    transition:  ease-in-out;
+}
+@keyframes open {
+        
+    to{
+        transform: rotate(-45deg);
+        margin-left: 300px;
+    }
+        
+}
 main  {
     display: flex;
     width: 75vw;
@@ -130,13 +168,7 @@ main section  {
     transform: rotate(45deg);
     
 }
-main section:hover{
-    
-    padding: 20px;
-    margin: -20px 0 50px;
-    animation: rotateMenu 1s
 
-}
 
 /* bron onderstaande animatie: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform */
 @keyframes rotateMenu {
@@ -180,16 +212,6 @@ main section dl, blockquote {
 
 }
 
-main section:hover > dl{
-    opacity: 1;
-    display: block;
-    font-size: 1.3em;  
-    margin-left: -20px;
-    mix-blend-mode: screen;
-    height: auto;
-
-}
-
 main section dl > div{
     display: flex;
     justify-content: space-between;
@@ -220,7 +242,10 @@ main section > dl::before{
 
 /* http://thenewcode.com/482/Placing-Text-on-a-Circle-with-SVG */
 
-/* RESPONSIVE */
+/*====================================
+             RESPONSIVE
+======================================= */
+
 /*MAX 600 PX*/
 @media only screen and (max-width: 600px) {
 
@@ -356,17 +381,14 @@ main section > dl::before{
     main section > dl::before{
         margin-left:30px ;
     }
-    main section:hover{
-        animation: open 1s ;
-        animation-fill-mode: forwards;
-    }
-    @keyframes open {
-        
-        to{
-            transform: rotate(0);
-            margin-left: 300px;
-        }
-        
-    }
+
 }
+
+/*
+================================================
+               PRINT STYLE SHEET
+================================================
+*/
+
+
 
