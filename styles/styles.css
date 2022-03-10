@@ -433,8 +433,12 @@ main section > dl::before{
     body > header {
         width: 100%;
         margin: 0;
-        position: relative;
-        display: none;
+        position: fixed;
+        bottom: -2cm;
+        left: -4cm;
+        opacity: 0.8;
+
+        
 
     }
     header section{
@@ -445,9 +449,9 @@ main section > dl::before{
         display: none;
     }
      h1{
-        font-size: 40pt;
+        font-size: 38pt;
         letter-spacing: normal;
-         text-align: center;
+         text-align: left;
          width: 100%;
 
     }
@@ -457,7 +461,7 @@ main section > dl::before{
     }
 
     header:nth-child(2) section p {
-        font-size: 20pt;
+        font-size: 18pt;
         letter-spacing: normal;
         
     }
